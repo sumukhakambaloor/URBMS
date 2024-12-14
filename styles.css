@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: #003366; /* Dark Blue */
+}
+
+/* Title Bar */
+header {
+    background-color: #003366; /* Dark Blue */
+    color: white; /* White Text */
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Logo and Image Boxes */
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+}
+
+.logo-container {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular Logo */
+    border: 2px solid #003366;
+}
+
+.image-boxes {
+    display: flex;
+    gap: 0.5cm; /* Set the gap between images to 0.5cm */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    width: 150px;
+    height: 100px;
+    background-color: #cce7ff; /* Light Blue Placeholder */
+    border: 2px solid #003366;
+    border-radius: 5px;
+}
+
+/* Secondary Title */
+.secondary-title {
+    margin: 2rem 0;
+}
+
+.secondary-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #003366; /* Dark Blue */
+}
+
+/* Buttons Section */
+.buttons-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.buttons-section button,
+.buttons-section a {
+    background-color: #003366; /* Dark Blue */
+    color: white; /* White Text */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.buttons-section button:hover,
+.buttons-section a:hover {
+    background-color: #002244; /* Slightly Darker Blue on Hover */
+}
+
+/* Footer */
+footer {
+    background-color: #003366; /* Dark Blue */
+    color: white; /* White Text */
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .image-box {
+        width: 120px;
+        height: 80px;
+    }
+
+    .buttons-section button,
+    .buttons-section a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem; /* Reduce title size */
+    }
+
+    .logo {
+        width: 100px; /* Smaller logo */
+        height: 100px;
+    }
+
+    .image-box {
+        width: 100px; /* Adjust image boxes */
+        height: 70px;
+    }
+
+    .buttons-section button,
+    .buttons-section a {
+        padding: 0.5rem 1rem; /* Adjust button size */
+        font-size: 0.8rem;
+    }
+
+    .secondary-title h2 {
+        font-size: 1.2rem; /* Reduce secondary title size */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
