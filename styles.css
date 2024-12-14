@@ -12,27 +12,27 @@ body {
 header {
     background-color: #003366; /* Dark Blue */
     color: white; /* White Text */
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.8rem;
+    line-height: 1.5;
 }
 
-/* Logo and Image Boxes */
+/* Top Section */
 .top-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     padding: 2rem 1rem;
+    gap: 1.5rem;
 }
 
 .logo-container {
-    flex-basis: 100%;
-    margin-bottom: 1rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .logo {
@@ -40,11 +40,12 @@ header h1 {
     height: 150px;
     border-radius: 50%; /* Circular Logo */
     border: 2px solid #003366;
+    object-fit: cover; /* Ensures proper scaling of logo */
 }
 
 .image-boxes {
     display: flex;
-    gap: 0.5cm; /* Set the gap between images to 0.5cm */
+    gap: 1rem; /* Increased gap for clarity */
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -55,6 +56,13 @@ header h1 {
     background-color: #cce7ff; /* Light Blue Placeholder */
     border: 2px solid #003366;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit within the box */
 }
 
 /* Secondary Title */
@@ -86,9 +94,8 @@ header h1 {
     font-size: 1rem;
     border-radius: 5px;
     text-decoration: none; /* Remove underline for links */
-    display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
     text-align: center;
 }
 
@@ -133,7 +140,7 @@ footer p {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.2rem; /* Reduce title size */
+        font-size: 1.4rem; /* Reduce title size */
     }
 
     .logo {
